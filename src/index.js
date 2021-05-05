@@ -1,10 +1,9 @@
 
 import './addElement';
-import img1 from '../public/test1.jpg';
-import img2 from '../public/test2.png';
+
 
 const foo = ()=>{
-    return "This is Foo";
+    return "This is Foo Foo foo foo";
 }
 const bar = ()=>{
     return "This is Bar";
@@ -12,12 +11,14 @@ const bar = ()=>{
 console.log(foo());
 console.log(bar());
 
+
+const btn = document.createElement('button');
+btn.innerHTML = "Load Me Up"
+btn.onclick = ()=>{
+    import('./codeSplitex').then((mod)=>{
+        console.log(mod.default());
+    })
+}
+document.body.appendChild(btn);
 // adding images in files
 
-const imageEle1 = document.createElement('img');
-const imageEle2 = document.createElement('img');
-imageEle1.src = img1;
-imageEle2.src = img2;
-
-document.body.appendChild(imageEle1);
-document.body.appendChild(imageEle2);

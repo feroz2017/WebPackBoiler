@@ -7,6 +7,7 @@ module.exports = {
     filename: "main.js",
   },
   module:{
+      
     rules:[
         {
             test: /\.css$/i,
