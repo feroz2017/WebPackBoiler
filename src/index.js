@@ -1,3 +1,5 @@
+
+import './addElement';
 const foo = ()=>{
     return "This is Foo";
 }
