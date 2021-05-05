@@ -20,7 +20,19 @@ module.exports = {
               "css-loader",
               "less-loader",
             ],
-        }
+        },
+        {
+            test: /\.(gif|png|jpe?g|svg)$/i,
+            use: [
+              {
+                loader: 'url-loader',
+                options: {
+                    limit: 60000
+                }
+              },
+              'image-webpack-loader'
+            ],
+          }
     ]
   },
   plugins:[
