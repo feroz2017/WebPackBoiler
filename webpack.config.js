@@ -1,3 +1,6 @@
+
+// for HTTPS
+// npm start -- --https --cert private.pem --key keypair.pem
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
@@ -7,7 +10,6 @@ module.exports = {
     filename: "main.js",
   },
   module:{
-
     rules:[
         {
             test: /\.css$/i,
